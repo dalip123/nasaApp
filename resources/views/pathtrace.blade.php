@@ -5,21 +5,24 @@
 
 <script>
 function myMap() {
-  var stavanger = new google.maps.LatLng(28.5451765,77.3310059);
-  var amsterdam = new google.maps.LatLng(28.5951765,77.3610059);
-    var a1 = new google.maps.LatLng(28.5952765,77.3710059);
+  var var1 = new google.maps.LatLng(28.5351765,78.4060059)
+  var stavanger = new google.maps.LatLng(28.80051765,77.3210059);
+  var amsterdam = new google.maps.LatLng(28.5951765,77.5589059);
+    var a1 = new google.maps.LatLng(28.6989,77.7710059);
         var a3 = new google.maps.LatLng(28.6091765,78.3615059);
-  var london = new google.maps.LatLng( 29.6151765,79.3623059);
+  var london = new google.maps.LatLng( 28.7981765,78.3623059);
 
   var mapCanvas = document.getElementById("map");
   var mapOptions = {center: amsterdam, zoom: 4};
   var map = new google.maps.Map(mapCanvas,mapOptions);
 
   var flightPath = new google.maps.Polyline({
-    path: [stavanger, amsterdam, a1,a3,london],
-    strokeColor: "#0000FF",
-    strokeOpacity: 0.8,
-    strokeWeight: 2
+    path: [var1 ,stavanger, amsterdam, a1,a3,london],
+    strokeColor: "#ff3333",
+    strokeOpacity: 0.7,
+    strokeWeight: 20,
+    geodesic: true
+
   });
   flightPath.setMap(map);
 }

@@ -82,7 +82,9 @@
             </div>
             <div class="col-md-6">
              <button class="btn btn-primary" ng-click="start()">Start</button>
-             <button id="stop" ng-click="stop()" >Stop</button>
+             <button id="stop" class="btn btn-primary" ng-click="stop()" >Stop</button>
+             <button id="stop" class="btn btn-primary">Pause</button>
+             <button id="stop" class="btn btn-primary" >Restart</button>
             </div>
         </div>
         <div class="row" ng-if="flag">
@@ -135,7 +137,8 @@ app.controller('indexController', function($scope,$http) {
     };
     $scope.stop=function () {
       $scope.stopped=1;
-      return $scope.stopped;
+      alert("stop path tracing.");
+    
     };
     $scope.storeData= function (latitude,longitude) {
        return $http.get('http://127.0.0.1:8000/admin/'+latitude+'/'+longitude).then(function(response) {

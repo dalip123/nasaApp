@@ -21,3 +21,6 @@ Route::get('/index',function() {
 Route::get('/pathtrace',function() {
     return view('pathtrace');
 });
+Route::get('/home',function() {
+	return view('home');
+});
