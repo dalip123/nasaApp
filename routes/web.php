@@ -24,3 +24,6 @@ Route::get('/pathtrace',function() {
 Route::get('/home',function() {
 	return view('home');
 });
+Route::get('/cluster',function() {
+	return view('cluster');
+});
